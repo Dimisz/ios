@@ -9,8 +9,8 @@ class Animal {
 }
 
 class Dog: Animal {
-    override init(legs: Int) {
-        super.init(legs: legs)
+    init() {
+        super.init(legs: 4)
     }
     
     func speak(){
@@ -19,9 +19,6 @@ class Dog: Animal {
 }
 
 final class Corgi: Dog {
-    init(){
-        super.init(legs: 4)
-    }
     
     override func speak(){
         print("Corgi with \(legs) legs barking, woo!")
@@ -29,9 +26,7 @@ final class Corgi: Dog {
 }
 
 final class Poodle: Dog {
-    init(){
-        super.init(legs: 4)
-    }
+
     override func speak(){
         print("Poodle with \(legs) legs barking, woo!")
     }
@@ -80,7 +75,7 @@ let persian = Persian()
 persian.speak()
 let lion = Lion()
 lion.speak()
-let dog = Dog(legs: 4)
+let dog = Dog()
 dog.speak()
 let cat = Cat(isTame: true)
 cat.speak()
